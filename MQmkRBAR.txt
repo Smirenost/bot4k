@@ -1,0 +1,234 @@
+{
+  "name": "zglos",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "jsexV",
+  "actions": [
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embediro_ERROR1",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embediro_ERROR1",
+      "message": "Oznacz użytkownika którego chcesz zgłosić!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embediro_ERROR1",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "condition": "0",
+      "comparison": "2",
+      "value": "0",
+      "iftrue": "3",
+      "iftrueVal": "4",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embediro_ERROR2",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embediro_ERROR2",
+      "message": "Napisz powód zgłoszenia!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embediro_ERROR2",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "info": "2",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "user",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "reason",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "find": "zgloszenia",
+      "storage": "1",
+      "varName": "zgloszenia",
+      "name": "Find Channel"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "user_dodaje",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "AVATAR_ZGLASZAJACEGO",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "AVATAR_TYPA",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "",
+      "author": "Dodano nowe zgłoszenie!",
+      "color": "#E60EF1",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "${tempVars(\"AVATAR_ZGLASZAJACEGO\")}",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"AVATAR_TYPA\")}",
+      "storage": "1",
+      "varName": "reported4",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "reported4",
+      "message": "• Zgłaszający: **${tempVars(\"user_dodaje\")}**\n• Zgłoszony użytkownik: **${tempVars(\"user\")}**\n• Powód zgłoszenia: **${tempVars(\"reason\")}**\n\n",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "reported4",
+      "message": "✅ = Wykonano! • ❌ = Sprawa nie dla helpera! • 👎 = Odrzucamy!",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "reported4",
+      "channel": "5",
+      "varName2": "zgloszenia",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Dziękujemy!** Twoje zgłoszenie zostało wysłane do naszej administracji.",
+      "storage": "1",
+      "varName2": "send",
+      "name": "Send Message"
+    },
+    {
+      "channel": "3",
+      "varName": "zgloszenia",
+      "info": "4",
+      "storage": "1",
+      "varName2": "lastmsg",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "lastmsg",
+      "emoji": "4",
+      "varName2": "✅",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "lastmsg",
+      "emoji": "4",
+      "varName2": "❌",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "lastmsg",
+      "emoji": "4",
+      "varName2": "👎",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "send",
+      "name": "Delete Message"
+    }
+  ],
+  "comType": "0"
+}
